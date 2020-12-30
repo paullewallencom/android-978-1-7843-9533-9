@@ -1,0 +1,4 @@
+adb -e shell monkey -p com.blundell.tut --port 1080 &
+adb -e forward tcp:1080 tcp:1080
+telnet localhost 1080
+tap 150 200

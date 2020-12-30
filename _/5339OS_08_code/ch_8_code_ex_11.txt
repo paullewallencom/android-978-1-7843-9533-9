@@ -1,0 +1,29 @@
+Experiment selection: 
+  Instruments:   [allocation, runtime]
+  User parameters:   {total=[1, 10, 100]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Starting trial 1 of 6: {instrument=allocation, benchmarkMethod=timeCelsiusToFahrenheit, vm=default, parameters={total=1}}… Complete!
+  bytes(B): min=32.00, 1st qu.=32.00, median=32.00, mean=32.00, 3rd qu.=32.00, max=32.00
+  objects: min=1.00, 1st qu.=1.00, median=1.00, mean=1.00, 3rd qu.=1.00, max=1.00
+Starting trial 2 of 6: {instrument=allocation, benchmarkMethod=timeCelsiusToFahrenheit, vm=default, parameters={total=10}}… Complete!
+  bytes(B): min=32.00, 1st qu.=32.00, median=32.00, mean=32.00, 3rd qu.=32.00, max=32.00
+  objects: min=1.00, 1st qu.=1.00, median=1.00, mean=1.00, 3rd qu.=1.00, max=1.00
+Starting trial 3 of 6: {instrument=allocation, benchmarkMethod=timeCelsiusToFahrenheit, vm=default, parameters={total=100}}… Complete!
+  bytes(B): min=32.00, 1st qu.=32.00, median=32.00, mean=32.00, 3rd qu.=32.00, max=32.00
+  objects: min=1.00, 1st qu.=1.00, median=1.00, mean=1.00, 3rd qu.=1.00, max=1.00
+Starting trial 4 of 6: {instrument=runtime, benchmarkMethod=timeCelsiusToFahrenheit, vm=default, parameters={total=1}}… Complete!
+  runtime(ns): min=4.85, 1st qu.=4.85, median=4.91, mean=4.91, 3rd qu.=4.96, max=5.00
+Starting trial 5 of 6: {instrument=runtime, benchmarkMethod=timeCelsiusToFahrenheit, vm=default, parameters={total=10}}… Complete!
+  runtime(ns): min=18.52, 1st qu.=18.60, median=18.72, mean=18.75, 3rd qu.=18.88, max=19.16
+Starting trial 6 of 6: {instrument=runtime, benchmarkMethod=timeCelsiusToFahrenheit, vm=default, parameters={total=100}}… Complete!
+  runtime(ns): min=158.09, 1st qu.=159.52, median=161.16, mean=162.42, 3rd qu.=163.06, max=175.13
+
+Execution complete: 1.420m.
+Collected 81 measurements from:
+  2 instrument(s)
+  2 virtual machine(s)
+  3 benchmark(s)
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/33dcd3fc-fde7-4a37-87d9-aa595b6c9224

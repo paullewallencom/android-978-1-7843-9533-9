@@ -1,0 +1,12 @@
+# monkey
+tap 200 200
+type HelloWorld
+tap 200 350
+tap 200 200
+press DEL
+press DEL
+press DEL
+press DEL
+press DEL
+type Monkey
+tap 200 350

@@ -1,0 +1,1 @@
+adb -e shell monkey -p com.blundell.tut -v -v 1000

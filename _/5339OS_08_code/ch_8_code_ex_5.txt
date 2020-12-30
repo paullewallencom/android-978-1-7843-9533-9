@@ -1,0 +1,4 @@
+defaultConfig {
+        // other code
+        testInstrumentationRunner "com.blundell.tut.launchperf.TemperatureConverterActivityLaunchPerformance"
+}

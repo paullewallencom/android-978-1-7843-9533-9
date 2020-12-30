@@ -1,0 +1,8 @@
+public void testListScrolling() {
+	listView.scrollTo(0, 0);
+
+    TouchUtils.dragQuarterScreenUp(this, activity); 
+    int actualItemPosition = listView.getFirstVisiblePosition();
+
+    assertTrue("Wrong position", actualItemPosition > 0);
+}

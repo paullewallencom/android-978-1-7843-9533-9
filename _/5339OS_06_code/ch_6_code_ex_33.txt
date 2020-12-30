@@ -1,0 +1,9 @@
+    @Test(expected = InvalidTemperatureException.class)
+    public void testExceptionForLessThanAbsoluteZeroF() {
+        TemperatureConverter.fahrenheitToCelsius(TemperatureConverter.ABSOLUTE_ZERO_F - 1);
+    }
+
+    @Test(expected = InvalidTemperatureException.class)
+    public void testExceptionForLessThanAbsoluteZeroC() {
+        TemperatureConverter.celsiusToFahrenheit(TemperatureConverter.ABSOLUTE_ZERO_C - 1);
+    }

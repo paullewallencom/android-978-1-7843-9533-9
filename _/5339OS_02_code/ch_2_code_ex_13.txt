@@ -1,0 +1,5 @@
+public void testWritingContacts() {
+	Uri URI = ContactsContract.AUTHORITY_URI;
+	String PERMISSION = android.Manifest.permission.WRITE_CONTACTS;
+	assertWritingContentUriRequiresPermission(URI, PERMISSION);
+}

@@ -1,0 +1,39 @@
+public class FocusTest extends AndroidTestCase {
+    private FocusFinder focusFinder;
+
+    private ViewGroup layout;
+
+    private Button leftButton;
+    private Button centerButton;
+    private Button rightButton;
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+
+        focusFinder = FocusFinder.getInstance();
+
+        // inflate the layout
+        Context context = getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
+        layout = (ViewGroup) inflater.inflate(R.layout.view_focus, null);
+
+        // manually measure it, and lay it out
+        layout.measure(500, 500);
+        layout.layout(0, 0, 500, 500);
+
+        leftButton = (Button) layout.findViewById(R.id.focus_left_button);
+        centerButton = (Button) layout.findViewById(R.id.focus_center_button);
+        rightButton = (Button) layout.findViewById(R.id.focus_right_button);
+    }
+
+    public void testGoingRightFromLeftButtonJumpsOverCenterToRight() {
+        View actualNextButton = focusFinder.findNextFocus(layout, leftButton, View.FOCUS_RIGHT);
+        assertEquals("right should be next focus from left", this.rightButton, actualNextButton);
+    }
+
+    public void testGoingLeftFromRightButtonGoesToCenter() {
+        View actualNextButton = focusFinder.findNextFocus(layout, rightButton, View.FOCUS_LEFT);
+        assertEquals("center should be next focus from right", this.centerButton, actualNextButton);
+    }
+}

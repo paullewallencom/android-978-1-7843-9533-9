@@ -1,0 +1,8 @@
+public void testSendKeyString() {
+	requestMessageInputFocus();
+
+    sendKeys("H 3*E Y DPAD_DOWN ENTER");
+    String actual = messageInput.getText().toString();
+
+    assertEquals("HEEEY", actual);
+}

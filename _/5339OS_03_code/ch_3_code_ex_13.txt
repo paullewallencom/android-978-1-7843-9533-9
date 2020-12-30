@@ -1,0 +1,13 @@
+public class DummyService extends Service {
+    @Override
+    public IBinder onBind(Intent intent) {
+        return new LocalBinder();
+    }
+
+    public class LocalBinder extends Binder {
+        DummyService getService() {
+            return DummyService.this;
+        }
+    }
+
+}

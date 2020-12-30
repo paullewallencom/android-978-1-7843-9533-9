@@ -1,0 +1,9 @@
+$ cd <path/to>/git-repo
+$ mkdir AndroidApplicationTestingGuide
+$ cd AndroidApplicationTestingGuide
+$ git init
+$ cp -a <path/to>/AndroidApplicationTestingGuide/. .
+$ gradlew clean
+$ rm local.properties
+$ git add .
+$ git commit -m "Initial commit"

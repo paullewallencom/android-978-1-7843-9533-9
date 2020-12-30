@@ -1,0 +1,6 @@
+<TextView 
+	android:id="@+id/link
+    android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+    android:text="@string/home"
+	android:autoLink="web" />

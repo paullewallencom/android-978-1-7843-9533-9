@@ -1,0 +1,13 @@
+@DomainStep("I obtain '(Invalid temperature: " + ANY_TEMPERATURE + "(C|F)" + " below absolute zero)' exception")
+    public boolean verifyException(String message, String value, String unit) {
+        try {
+          if ( "C".equals(unit)) {
+            getFahrenheit();
+          } else {
+            getCelsius();
+          }
+        } catch (RuntimeException ex) {
+          return ex.getMessage().contains(message);
+        }
+        return false;
+      }

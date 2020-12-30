@@ -1,0 +1,3 @@
+  public final void testForceFailure() {
+    fail("fail test is fail");
+  }

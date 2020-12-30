@@ -1,0 +1,8 @@
+apply plugin: 'java'
+
+dependencies {
+    compile project(':core')
+//    compile 'com.google.caliper:caliper:1.0-beta-1'  // Does not contain annotations
+    // waiting for https://code.google.com/p/caliper/issues/detail?id=291
+    compile 'net.trajano.caliper:caliper:1.1.1'
+}

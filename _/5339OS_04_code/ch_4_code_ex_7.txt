@@ -1,0 +1,1 @@
+emulator -avd test -no-window -no-audio -no-boot-anim -port 5580 -qemu -vnc :2

@@ -1,0 +1,37 @@
+Configuring > 3/3 projects
+:app:preBuild
+:app:compileDebugNdk 
+:app:preDebugBuild
+:app:checkDebugManifest
+:app:prepareDebugDependencies
+:app:compileDebugAidl 
+:app:compileDebugRenderscript 
+:app:generateDebugBuildConfig 
+:app:generateDebugAssets 
+:app:mergeDebugAssets 
+:app:generateDebugResValues 
+:app:generateDebugResources 
+:app:mergeDebugResources 
+:app:processDebugManifest 
+:app:processDebugResources 
+:app:generateDebugSources 
+:core:compileJava 
+:core:processResources 
+:core:classes 
+:core:jar 
+:app:compileDebugJava 
+:app:preDexDebug 
+:app:dexDebug 
+:app:processDebugJavaRes 
+:app:validateDebugSigning
+:app:packageDebug 
+:app:zipalignDebug 
+:app:assembleDebug 
+:app:installDebug
+Installing APK 'app-debug.apk' on 'emulator-5554'
+Installing APK 'app-debug.apk' on 'Samsung Galaxy S4'
+Installed on 2 devices.
+
+BUILD SUCCESSFUL
+
+Total time: 11.011 secs

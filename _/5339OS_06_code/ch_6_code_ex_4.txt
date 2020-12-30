@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin"
+    android:text="@string/message" />
+
+  <TextView
+    android:id="@+id/converter_celsius_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin"
+    android:text="@string/celsius" />
+
+  <EditText
+    android:id="@+id/converter_celsius_input"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin" />
+
+  <TextView
+    android:id="@+id/converter_fahrenheit_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin"
+    android:text="@string/fahrenheit" />
+
+  <EditText
+    android:id="@+id/converter_fahrenheit_input"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin" />
+</LinearLayout>

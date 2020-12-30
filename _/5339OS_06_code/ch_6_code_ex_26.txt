@@ -1,0 +1,6 @@
+    public void testSetNumber() {
+
+        editNumber.setNumber(123.45);
+
+        assertEquals("123.45", editNumber.getText().toString());
+    }

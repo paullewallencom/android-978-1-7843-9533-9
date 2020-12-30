@@ -1,0 +1,6 @@
+INFO/TestRunner(1): java.lang.RuntimeException: Exception during suite construction
+INFO/TestRunner(1):     at android.test.suitebuilder.TestSuiteBuilder$FailedToCreateTests.testSuiteConstructionFailed(TestSuiteBuilder.java:239)
+INFO/TestRunner(1):     at java.lang.reflect.Method.invokeNative(Native Method)
+[...]
+INFO/TestRunner(1):     at android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:520)
+INFO/TestRunner(1):     at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1447)

@@ -1,0 +1,5 @@
+public void testAlignment() {
+	int margin = 0;
+	...
+	android.test.ViewAsserts.assertRightAligned(errorMsg, editText, margin);
+}

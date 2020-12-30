@@ -1,0 +1,14 @@
+-|script|
+|given |I'm using the !-TemperatureConverter-!                           |
+|when  |I enter -100 into the Celsius field                              |
+|then  |I obtain -148 in the Fahrenheit field                            |
+
+-|script|
+|given |I'm using the !-TemperatureConverter-!                           |
+|when  |I enter -100 into the Fahrenheit field                           |
+|then  |I obtain -73.33 in the Celsius field                             |
+
+-|script|
+|given|I'm using the !-TemperatureConverter-!                                |
+|when |I enter -460 into the Fahrenheit field                                |
+|then |I obtain 'Invalid temperature: -460.00F below absolute zero' exception|

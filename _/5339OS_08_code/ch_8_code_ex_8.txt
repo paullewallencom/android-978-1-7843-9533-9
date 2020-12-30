@@ -1,0 +1,1 @@
+$ adb pull /mnt/sdcard/dmtrace.trace /tmp/dmtrace.trace 	8491 KB/s (120154 bytes in 0.013s)$ traceview /tmp/dmtrace.trace

@@ -1,0 +1,5 @@
+    private static final String DEFAULT_FORMAT = "%.2f";
+  
+    public void setNumber(double number) {
+        super.setText(String.format(DEFAULT_FORMAT, number));
+    } 

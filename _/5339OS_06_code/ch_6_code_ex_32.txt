@@ -1,0 +1,9 @@
+    static final double ABSOLUTE_ZERO_C = -273.15d;
+    
+    public static double celsiusToFahrenheit(double celsius) {
+        if (celsius < ABSOLUTE_ZERO_C) {
+            String msg = String.format(ERROR_MESSAGE_BELOW_ZERO_FMT, celsius, 'C');
+            throw new InvalidTemperatureException(msg);
+        }
+        return (celsius * 1.8d + 32);
+    }

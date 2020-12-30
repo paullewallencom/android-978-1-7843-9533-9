@@ -1,0 +1,19 @@
+	public void testTextChangedFilterWorksForCharacterInput() {
+  		assertEditNumberTextChangeFilter("A1A", "1");
+	}
+
+    /**
+     * @param input  the text to be filtered by {@link com.blundell.tut.EditNumber}
+     * @param output the result you expect once the {@param input} has been filtered
+     */
+    private void assertEditNumberTextChangeFilter(String input, String output) {
+        int lengthAfter = output.length();
+        TextWatcher mockTextWatcher = mock(TextWatcher.class);
+        editNumber.addTextChangedListener(mockTextWatcher);
+
+        editNumber.setText(input);
+
+        verify(mockTextWatcher).afterTextChanged(editableCharSequenceEq(output));
+        verify(mockTextWatcher).onTextChanged(charSequenceEq(output), eq(0), eq(0), eq(lengthAfter));
+        verify(mockTextWatcher).beforeTextChanged(charSequenceEq(""), eq(0), eq(0), eq(lengthAfter));
+    }

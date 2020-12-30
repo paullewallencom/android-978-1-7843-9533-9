@@ -1,0 +1,6 @@
+public void testActivityPermission() {
+	String PKG = "com.blundell.tut";
+	String ACTIVITY =  PKG + ".MyContactsActivity";
+	String PERMISSION = android.Manifest.permission.CALL_PHONE;
+	assertActivityRequiresPermission(PKG, ACTIVITY, PERMISSION);
+}

@@ -1,0 +1,19 @@
+def androidModuleName = ":app";
+def flavor = "debug"
+
+evaluationDependsOn(androidModuleName)
+
+apply plugin: 'java'
+
+dependencies {
+    def androidModule = project(androidModuleName)
+    testCompile project(path: androidModuleName, configuration: "${flavor}Compile")
+
+    def debugVariant = androidModule.android.applicationVariants.find({ it.name == flavor })
+    testCompile debugVariant.javaCompile.classpath
+    testCompile debugVariant.javaCompile.outputs.files
+    testCompile files(androidModule.plugins.findPlugin("com.android.application").getBootClasspath())
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.robolectric:robolectric:2.4'
+}

@@ -1,0 +1,28 @@
+|import|
+|org.givwenzen|
+-|script|
+|start|giv wen zen for slim|
+
+
+-|script|
+|given|I'm using the !-TemperatureConverter-!|
+|when |I enter 100 into the Celsius field|
+|then |I obtain 212 in the Fahrenheit field|
+
+!define TEST_SYSTEM {slim}
+
+!path ./target/classes
+!path ./target/examples
+!path ./lib/clover-2.6.1.jar
+!path ./lib/commons-logging.jar
+!path ./lib/commons-vfs-1.0.jar
+!path ./lib/dom4j-1.6.1.jar
+!path ./lib/fitnesse.jar
+!path ./lib/guava-18.0.jar
+!path ./lib/javassist.jar
+!path ./lib/log4j-1.2.9.jar
+!path ./lib/slf4j-simple-1.5.6.jar
+!path ./lib/slf4j-api-1.5.6.jar
+
+!path /Users/blundell/AndroidApplicationTestingGuide/core/build/classes/test
+!path /Users/blundell/AndroidApplicationTestingGuide/core/build/classes/main

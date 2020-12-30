@@ -1,0 +1,8 @@
+public void testClear() {
+        	String value = "123.45";
+        	editNumber.setText(value);
+
+        	editNumber.clear();
+
+        	assertEquals("", editNumber.getText().toString());
+} 

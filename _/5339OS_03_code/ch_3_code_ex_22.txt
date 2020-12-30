@@ -1,0 +1,6 @@
+public void assertNotInLowMemoryCondition() {
+	//Verification: check if it is in low memory
+	ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
+ 	((ActivityManager)getActivity().getSystemService(Context.ACTIVITY_SERVICE)).getMemoryInfo(mi);
+	assertFalse("Low memory condition", mi.lowMemory);
+}

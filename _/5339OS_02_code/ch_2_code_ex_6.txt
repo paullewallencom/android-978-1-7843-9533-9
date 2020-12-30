@@ -1,0 +1,7 @@
+public void testUserInterfaceLayout() {
+	int margin = 0;
+	View origin = mActivity.getWindow().getDecorView();
+	assertOnScreen(origin, editText);
+	assertOnScreen(origin, button);
+	assertRightAligned(editText, button, margin);
+}

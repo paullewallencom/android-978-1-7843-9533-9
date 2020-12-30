@@ -1,0 +1,22 @@
+   public EditNumber(Context context) {
+        super(context);
+        init();
+   }
+
+   public EditNumber(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init();
+   }
+
+   public EditNumber(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        init();
+   }
+
+   private void init() {
+    // DigistKeyListener.getInstance(true, true) 
+    // returns an instance that accepts digits, sign and decimal point
+    InputFilter[] filters = 
+new InputFilter[]{DigitsKeyListener.getInstance(true, true)};
+        setFilters(filters);
+   } 

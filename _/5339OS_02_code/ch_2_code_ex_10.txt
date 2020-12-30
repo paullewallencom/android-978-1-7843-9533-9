@@ -1,0 +1,9 @@
+public class MyTestCase extends TestCase {
+	public MyTestCase() {
+		this(“MyTestCase Default Name”);
+	}
+
+	public MyTestCase(String name) {
+		super(name);
+	}
+}

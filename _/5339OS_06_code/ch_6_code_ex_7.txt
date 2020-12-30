@@ -1,0 +1,6 @@
+    public void testAlignment() {
+        assertLeftAligned(celsiusLabel, celsiusInput);
+        assertLeftAligned(fahrenheitLabel, fahrenheitInput);
+        assertLeftAligned(celsiusInput, fahrenheitInput);
+        assertRightAligned(celsiusInput, fahrenheitInput);
+    }

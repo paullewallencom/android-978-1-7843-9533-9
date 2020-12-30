@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  style="?android:attr/buttonBarStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal">
+
+  <Button
+    android:id="@+id/focus_left_button"
+    style="?android:attr/buttonBarButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="3dip"
+    android:contentDescription="@string/focus_2_left"
+    android:nextFocusRight="@+id/focus_right_button"
+    android:text="@string/focus_2_left" />
+
+  <Button
+    android:id="@+id/focus_center_button"
+    style="?android:attr/buttonBarButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="3dip"
+    android:contentDescription="@string/focus_2_jump"
+    android:text="@string/focus_2_jump" />
+
+  <Button
+    android:id="@id/focus_right_button"
+    style="?android:attr/buttonBarButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="3dip"
+    android:contentDescription="@string/focus_2_right"
+    android:text="@string/focus_2_right" />
+
+</LinearLayout>

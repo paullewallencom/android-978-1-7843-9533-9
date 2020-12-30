@@ -1,0 +1,10 @@
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_temperature_converter);
+
+        EditNumber celsiusEditNumber = (EditNumber) findViewById(R.id.converter_celsius_input);
+        EditNumber fahrenheitEditNumber = (EditNumber) findViewById(R.id.converter_fahrenheit_input);
+        celsiusEditNumber.addTextChangedListener(newCelciusToFehrenheitWatcher(celsiusEditNumber, fahrenheitEditNumber));
+        fahrenheitEditNumber.addTextChangedListener(newFehrenheitToCelciusWatcher(fahrenheitEditNumber, celsiusEditNumber));
+    }

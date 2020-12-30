@@ -1,0 +1,8 @@
+org.junit.Assert.assertEquals(3, myList.size());
+
+java.lang.AssertionError: Expected :3Actual   :2assertEquals("List not the correct size " + myList, 3, myList.size());java.lang.AssertionError: List not the correct size [A, B] Expected :3Actual   :2org.fest.assertions.api.assertThat(myList).hasSize(3);
+
+java.lang.AssertionError: expected size:<3> but was:<2> in:<['A', 'B']>
+
+
+assertThat(myList).contains("A", "B", "C");java.lang.AssertionError: expecting:<['A', 'B']> to contain:<['A', 'B', 'C']> but could not find:<['C']>

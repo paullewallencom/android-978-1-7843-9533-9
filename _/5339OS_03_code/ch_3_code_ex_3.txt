@@ -1,0 +1,22 @@
+public class TemperatureConverterApplicationTests extends Applica-tionTestCase<TemperatureConverterApplication> {
+
+    public TemperatureConverterApplicationTests() {
+        this("TemperatureConverterApplicationTests");
+    }
+
+    public TemperatureConverterApplicationTests(String name) {
+        super(TemperatureConverterApplication.class);
+        setName(name);
+    }
+
+    public void testSetAndRetreiveDecimalPlaces() {
+        RenamingMockContext mockContext = new RenamingMockCon-text(getContext());
+        setContext(mockContext);
+        createApplication();
+        TemperatureConverterApplication application = getApplication();
+
+        application.setDecimalPlaces(3);
+
+        assertEquals(3, application.getDecimalPlaces());
+    }
+}

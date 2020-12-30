@@ -1,0 +1,5 @@
+dependencies {
+    // other compile dependencies
+
+    androidTestCompile('com.google.dexmaker:dexmaker-mockito:1.1')
+}

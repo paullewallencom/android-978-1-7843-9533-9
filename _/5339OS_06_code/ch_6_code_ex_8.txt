@@ -1,0 +1,4 @@
+celsiusLabel = (TextView) 
+	activity.findViewById(R.id.converter_celsius_label);
+fahrenheitLabel = (TextView) 
+	activity.findViewById(R.id.converter_fahrenheit_label);

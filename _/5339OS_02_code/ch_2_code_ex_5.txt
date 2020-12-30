@@ -1,0 +1,6 @@
+import static android.test.ViewAsserts.assertRightAligned;
+
+public void testAlignment() {
+   int margin = 0;
+   assertRightAligned(errorMsg, editText, margin);
+}

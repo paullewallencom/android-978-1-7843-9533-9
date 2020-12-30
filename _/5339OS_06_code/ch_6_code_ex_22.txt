@@ -1,0 +1,7 @@
+    public EditNumberTests() {
+        this("EditNumberTests");
+    }
+
+    public EditNumberTests(String name) {
+        setName(name);
+    }

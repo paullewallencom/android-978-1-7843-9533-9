@@ -1,0 +1,6 @@
+INFO/TestRunner(610): ----- begin exception -----
+INFO/TestRunner(610): android.view.ViewRoot$CalledFromWrongThreadException: Only the original thread that created a view hierarchy can touch its views.
+INFO/TestRunner(610):     at android.view.ViewRoot.checkThread(ViewRoot.java:2932)
+[...]
+INFO/TestRunner(610):     at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1447)
+INFO/TestRunner(610): ----- end exception -----

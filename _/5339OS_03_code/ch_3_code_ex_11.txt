@@ -1,0 +1,8 @@
+    public void testExceptionForLessThanAbsoluteZeroC() {
+        try {
+            TemperatureConverter.celsiusToFahrenheit(ABSOLUTE_ZERO_C - 1);
+            fail();
+        } catch (InvalidTemperatureException ex) {
+            // do nothing we expect this exception!
+        }
+    }

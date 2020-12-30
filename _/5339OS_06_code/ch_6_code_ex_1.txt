@@ -1,0 +1,8 @@
+  public TemperatureConverterActivityTests() {
+    this("TemperatureConverterActivityTests");
+  }
+  
+  public TemperatureConverterActivityTests(String name) {
+    super(TemperatureConverterActivity.class);
+    setName(name);
+  }

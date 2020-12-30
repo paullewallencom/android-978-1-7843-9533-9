@@ -1,0 +1,14 @@
+public void testFollowLink() {
+		IntentFilter intentFilter = new IntentFilter(Intent.ACTION_VIEW);
+        intentFilter.addDataScheme("http");
+        intentFilter.addCategory(Intent.CATEGORY_BROWSABLE);
+
+        Instrumentation inst = getInstrumentation();
+        ActivityMonitor monitor = inst.addMonitor(intentFilter, null, false);
+        TouchUtils.clickView(this, linkTextView);
+        monitor.waitForActivityWithTimeout(3000);
+        int monitorHits = monitor.getHits();
+        inst.removeMonitor(monitor);
+
+        assertEquals(1, monitorHits);
+} 

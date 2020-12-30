@@ -1,0 +1,22 @@
+class CharSequenceMatcher extends ArgumentMatcher<CharSequence> {
+
+    private final CharSequence expected;
+
+    static CharSequence charSequenceEq(CharSequence expected) {
+        return argThat(new CharSequenceMatcher(expected));
+    }
+
+    CharSequenceMatcher(CharSequence expected) {
+        this.expected = expected;
+    }
+
+    @Override
+    public boolean matches(Object actual) {
+        return expected.toString().equals(actual.toString());
+    }
+
+    @Override
+    public void describeTo(Description description) {
+        description.appendText(expected.toString());
+    }
+}

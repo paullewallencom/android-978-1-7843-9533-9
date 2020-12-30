@@ -1,0 +1,8 @@
+adb -s emulator-5580 emu event send EV_KEY:KEY_MENU:1 EV_KEY:KEY_MENU:0
+
+@Override
+ public void setUp() throws Exception {
+   Activity activity = getActivity();
+   Window window = activity.getWindow();
+   window.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+ }

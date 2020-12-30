@@ -1,0 +1,6 @@
+    public void testFieldsOnScreen() {
+        View origin = activity.getWindow().getDecorView();
+
+        assertOnScreen(origin, celsiusInput);
+        assertOnScreen(origin, fahrenheitInput);
+    }

@@ -1,0 +1,12 @@
+@UiThreadTest
+public void testNoErrorInCapitalization() {
+	String msg = "capitalize this text";
+	editText.setText(msg);
+
+	button.performClick();
+
+	String actual = editText.getText().toString();
+	String notExpectedRegexp = "(?i:ERROR)";
+	String errorMsg = "Capitalization error for " + actual;
+	assertNotContainsRegex(errorMsg, notExpectedRegexp, actual);
+}

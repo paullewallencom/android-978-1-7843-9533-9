@@ -1,0 +1,28 @@
+#! /usr/bin/env monkeyrunner
+
+import sys
+
+# Imports the monkeyrunner modules used by this program
+from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice, MonkeyImage
+
+# Connects to the current device, returning a MonkeyDevice object
+device = MonkeyRunner.waitForConnection()
+
+if not device:
+    print >> sys.stderr, "Couldn't get connection"
+    sys.exit(1)
+
+device.startActivity(component='com.blundell.tut/.MonkeyActivity')
+
+MonkeyRunner.sleep(3.0)
+
+device.type("hello")
+
+# Takes a screenshot
+MonkeyRunner.sleep(3.0)
+result = device.takeSnapshot()
+
+# Writes the screenshot to a file
+result.writeToFile('/tmp/device.png','png')
+
+device.press('KEYCODE_BACK', 'DOWN_AND_UP')

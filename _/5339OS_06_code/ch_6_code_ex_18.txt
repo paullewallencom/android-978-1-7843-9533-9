@@ -1,0 +1,11 @@
+@Test
+public void testFahrenheitToCelsius() {
+    for (double knownCelsius : conversionTable.keySet()) {
+        double knownFahrenheit = conversionTable.get(knownCelsius);
+
+        double resultCelsius = TemperatureConverter.fahrenheitToCelsius(knownFahrenheit);
+
+        double delta = Math.abs(resultCelsius - knownCelsius);
+        String msg = knownFahrenheit + "F -> " + knownCelsius + "C “ + “but is " + resultCelsius;
+        assertTrue(msg, delta < 0.0001);
+}

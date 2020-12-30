@@ -1,0 +1,6 @@
+<EditText
+    android:id="@+id/converter_celsius_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin"
+    android:gravity="end|center_vertical" /> 

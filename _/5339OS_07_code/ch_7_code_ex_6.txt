@@ -1,0 +1,4 @@
+-|script|
+|given|I am using the !-TemperatureConverter-!             |
+|when |I enter -274 into the Celsius field                 |
+|then |I obtain 'Invalid temperature: -274.00C below absolute zero' exception|

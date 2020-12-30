@@ -1,0 +1,9 @@
+public void testMax() {
+	int a = 10;
+	int b = 20;
+
+	int actual = Math.max(a, b);
+
+	String failMsg = "Expected: " + b + " but was: " + actual;
+	assertEquals(failMsg, b, actual);
+}

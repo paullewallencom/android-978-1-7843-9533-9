@@ -1,0 +1,9 @@
+emulator -avd testdevice -no-window -no-audio -no-boot-anim -port 5580
+
+adb devices
+
+adb -s emulator-5580 install YourApp.apk
+
+adb -s emulator-5580 install YourAppTests.apk
+
+adb -s emulator-5580 shell am instrument -w com.blundell.tut.test/android.test.InstrumentationTestRunner

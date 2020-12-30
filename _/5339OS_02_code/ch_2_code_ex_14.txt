@@ -1,0 +1,4 @@
+defaultConfig {
+	testApplicationId ‘com.blundell.tut.tests’
+	testInstrumentationRunner  “android.test.InstrumentationTestRunner”
+}

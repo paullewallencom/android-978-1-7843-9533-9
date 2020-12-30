@@ -1,0 +1,4 @@
+  packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude ‘folder/duplicatedFileName’
+  }

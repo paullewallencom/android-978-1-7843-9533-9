@@ -1,0 +1,3 @@
+:app:connectedAndroidTest
+BUILD SUCCESSFUL
+Total time: 9.812 secs

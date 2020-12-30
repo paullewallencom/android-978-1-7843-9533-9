@@ -1,0 +1,25 @@
+    public final void testClickOptionMenuSavesDecimalPreference() {
+        int decimalPlaces = 5;
+        String numberRegEx = "^[0-9]+$";
+
+        solo.sendKey(Solo.MENU);
+        solo.clickOnText("Preferences");
+        solo.clickOnText("Decimal places");
+        assertTrue(solo.searchText(numberRegEx));
+
+        solo.clearEditText(DECIMAL_PLACES);
+        assertFalse(solo.searchText(numberRegEx));
+
+        solo.enterText(DECIMAL_PLACES, Integer.toString(decimalPlaces));
+        solo.clickOnButton("OK");
+        solo.goBack();
+
+        solo.sendKey(Solo.MENU);
+        solo.clickOnText("Preferences");
+        solo.clickOnText("Decimal places");
+        assertTrue(solo.searchText(numberRegEx));
+
+        int editTextDecimalPlaces = Integer.parseInt(
+                solo.getEditText(DECIMAL_PLACES).getText().toString());
+        assertEquals(decimalPlaces, editTextDecimalPlaces);
+    }

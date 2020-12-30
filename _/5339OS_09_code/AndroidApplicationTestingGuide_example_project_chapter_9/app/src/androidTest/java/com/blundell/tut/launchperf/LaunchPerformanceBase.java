@@ -1,0 +1,36 @@
+package com.blundell.tut.launchperf;
+
+import android.app.Instrumentation;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
+public class LaunchPerformanceBase extends Instrumentation {
+
+    private static final String TAG = LaunchPerformanceBase.class.getClass().getSimpleName();
+
+    protected Bundle results;
+    protected Intent intent;
+
+    public LaunchPerformanceBase() {
+        this.results = new Bundle();
+        this.intent = new Intent(Intent.ACTION_MAIN);
+        this.intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        setAutomaticPerformanceSnapshots();
+    }
+
+    /**
+     * Launches intent {@link #intent}, and waits for idle before returning.
+     */
+    protected void launchApp() {
+        startActivitySync(intent);
+        waitForIdleSync();
+    }
+
+    @Override
+    public void finish(int resultCode, Bundle results) {
+        Log.v(TAG, "Test reults = " + results);
+        super.finish(resultCode, results);
+    }
+
+}

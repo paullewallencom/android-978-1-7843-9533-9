@@ -1,0 +1,13 @@
+public void testSendRepeatedKeys() {
+	requestMessageInputFocus();
+
+    sendRepeatedKeys(
+        1, KeyEvent.KEYCODE_H,
+        3, KeyEvent.KEYCODE_E,
+        1, KeyEvent.KEYCODE_Y,
+        1, KeyEvent.KEYCODE_DPAD_DOWN,
+        1, KeyEvent.KEYCODE_ENTER);
+    String actual = messageInput.getText().toString();
+
+    assertEquals("HEEEY", actual);
+}

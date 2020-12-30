@@ -1,0 +1,6 @@
+    public void testFontSizes() {
+        float pixelSize = 24f;
+
+        assertEquals(pixelSize, celsiusLabel.getTextSize());
+        assertEquals(pixelSize, fahrenheitLabel.getTextSize());
+    }

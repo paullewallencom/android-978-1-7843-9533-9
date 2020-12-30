@@ -1,0 +1,4 @@
+celsiusInput = (EditText) 
+	activity.findViewById(R.id.converter_celsius_input);
+fahrenheitInput = (EditText) 
+	activity.findViewById(R.id.converter_fahrenheit_input);

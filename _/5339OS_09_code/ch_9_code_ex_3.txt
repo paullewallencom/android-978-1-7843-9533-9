@@ -1,0 +1,9 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'com.github.bernerbits:givwenzen:1.0.6.1'
+}

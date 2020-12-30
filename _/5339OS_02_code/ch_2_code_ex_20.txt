@@ -1,0 +1,13 @@
+private void requestMessageInputFocus() {
+	try {
+    	runTestOnUiThread(new Runnable() {
+        	@Override
+            public void run() {
+            	messageInput.requestFocus();
+            }
+        });
+    } catch (Throwable throwable) {
+    	fail("Could not request focus.");
+    }
+    instrumentation.waitForIdleSync();
+}

@@ -1,0 +1,21 @@
+Argument(s) are different! Wanted:
+textWatcher.afterTextChanged(
+<Editable char sequence comparator>
+);
+-> at com.blundell.tut.EditNumberTests.assertEditNumberTextChangeFilter(EditNumberTests.java:110)
+Actual invocation has different arguments:
+textWatcher.afterTextChanged(
+1
+);
+-> at android.widget.TextView.sendAfterTextChanged(TextView.java:7424)
+
+Argument(s) are different! Wanted:
+textWatcher.afterTextChanged(
+1xx
+);
+-> at com.blundell.tut.EditNumberTests.assertEditNumberTextChangeFilter(EditNumberTests.java:110)
+Actual invocation has different arguments:
+textWatcher.afterTextChanged(
+1
+);
+-> at android.widget.TextView.sendAfterTextChanged(TextView.java:7424)

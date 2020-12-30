@@ -1,0 +1,7 @@
+public class TemperatureConverterActivityTests extends  ActivityInstrumen-tationTestCase2<TemperatureConverterActivity> {
+
+	private TemperatureConverterActivity activity;
+	private EditNumber celsiusInput;
+	private EditNumber fahrenheitInput;
+	private TextView celsiusLabel;
+	private TextView fahrenheitLabel;

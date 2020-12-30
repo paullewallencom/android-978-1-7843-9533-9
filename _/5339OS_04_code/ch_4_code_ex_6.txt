@@ -1,0 +1,9 @@
+emulator -avd test -port 5580 -netspeed gsm -netdelay gprs
+
+telnet localhost 5580
+gsm data unregistered
+quit
+
+telnet localhost 5580
+gsm data home
+gsm status

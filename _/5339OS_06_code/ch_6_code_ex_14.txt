@@ -1,0 +1,8 @@
+    public void testVirtualKeyboardSpaceReserved() {
+        int expected = getIntPixelSize(R.dimen.keyboard_space);
+
+        int actual = fahrenheitInput.getBottom();
+
+        String errorMessage = "Space not reserved, expected " + expected + " actual " + actual;
+        assertTrue(errorMessage, actual <= expected);
+    }

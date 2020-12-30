@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <EditTextPreference
+    android:summary="Number of decimal places"
+    android:defaultValue="2"
+    android:title="Decimal places"
+    android:persistent="true"
+    android:enabled="true"
+    android:selectable="true"
+    android:key="decimalPlaces" />
+</PreferenceScreen>

@@ -1,0 +1,12 @@
+:app:connectedAndroidTest
+com.blundell.tut.ExampleEspressoTest > testClickingButtonShowsImage[emulator-5554] FAILED 
+android.view.ViewRootImpl$CalledFromWrongThreadException: Only the original thread that created a view hierarchy can touch its views.
+  at android.view.ViewRootImpl.checkThread(ViewRootImpl.java:6024)
+FAILURE: Build failed with an exception.
+* What went wrong:
+Execution failed for task ':app:connectedAndroidTest'.
+> There were failing tests. See the report at: file:///AndroidApplicationTestingGuide/app/build/outputs/reports/androidTests/connected/index.html
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+BUILD FAILED
+Total time: 15.532 secs.

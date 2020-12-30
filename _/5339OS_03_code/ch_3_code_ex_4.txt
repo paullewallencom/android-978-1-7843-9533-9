@@ -1,0 +1,22 @@
+public class TemperatureConverterApplication extends Application {
+    private static final int DECIMAL_PLACES_DEFAULT = 2;
+    private static final String KEY_DECIMAL_PLACES = ".KEY_DECIMAL_PLACES";
+
+    private SharedPreferences sharedPreferences;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        sharedPreferences = PreferenceManag-er.getDefaultSharedPreferences(this);
+    }
+
+    public void setDecimalPlaces(int places) {
+        Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_DECIMAL_PLACES, places);
+        editor.apply();
+    }
+
+    public int getDecimalPlaces() {
+        return sharedPreferences.getInt(KEY_DECIMAL_PLACES, DECI-MAL_PLACES_DEFAULT);
+    }
+}

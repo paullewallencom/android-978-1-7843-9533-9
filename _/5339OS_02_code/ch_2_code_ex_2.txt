@@ -1,0 +1,8 @@
+public void testShouldThrowException() {
+	try {
+		MyFirstProjectActivity.methodThatShouldThrowException();
+		fail("Exception was not thrown");
+	} catch ( Exception ex ) {
+		// do nothing
+	}
+}

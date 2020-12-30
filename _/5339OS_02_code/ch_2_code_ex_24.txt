@@ -1,0 +1,8 @@
+public void testDeleteByIdDeletesOneRow() {
+    String segment = "dummySegment";
+    Uri uri = Uri.withAppendedPath(MyProvider.CONTENT_URI, segment);
+
+    int actual = provider.delete(uri, "_id = ?", new String[]{"1"});
+
+    assertEquals(1, actual);
+}

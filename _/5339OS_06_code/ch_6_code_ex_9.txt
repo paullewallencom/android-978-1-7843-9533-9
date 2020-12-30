@@ -1,0 +1,15 @@
+    public void testCelciusInputFieldCoversEntireScreen() {
+        int expected = ViewGroup.LayoutParams.MATCH_PARENT;
+
+        ViewGroup.LayoutParams lp = celsiusInput.getLayoutParams();
+
+        assertEquals("celsiusInput layout width is not MATCH_PARENT", expected, lp.width);
+    }
+
+    public void testFahrenheitInputFieldCoversEntireScreen() {
+        int expected = ViewGroup.LayoutParams.MATCH_PARENT;
+
+        ViewGroup.LayoutParams lp = fahrenheitInput.getLayoutParams();
+
+        assertEquals("fahrenheitInput layout width is not MATCH_PARENT", expected, lp.width);
+    }

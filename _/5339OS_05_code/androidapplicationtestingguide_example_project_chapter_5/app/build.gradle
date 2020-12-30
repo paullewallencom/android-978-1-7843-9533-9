@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.blundell.tut"
+        minSdkVersion 17
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/androidTest/assets/'] } }
+}
+
+dependencies {
+    compile project(':core')
+
+    androidTestCompile('com.google.dexmaker:dexmaker-mockito:1.1')
+    androidTestCompile('com.jakewharton.espresso:espresso:1.1-r3')
+}
+
+

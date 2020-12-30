@@ -1,0 +1,11 @@
+    public void testFontSizes() {
+        float pixelSize = getFloatPixelSize(R.dimen.label_text_size);
+
+        assertEquals(pixelSize, celsiusLabel.getTextSize());
+        assertEquals(pixelSize, fahrenheitLabel.getTextSize());
+    }
+
+    private float getFloatPixelSize(int dimensionResourceId) {
+        return getActivity().getResources()
+                 .getDimensionPixelSize(dimensionResourceId);
+    }

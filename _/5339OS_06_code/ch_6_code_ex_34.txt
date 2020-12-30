@@ -1,0 +1,16 @@
+    public void testInputFilter() throws Throwable {
+        runTestOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                celsiusInput.requestFocus();
+            }
+        });
+        getInstrumentation().waitForIdleSync();
+
+        sendKeys("MINUS 1 PERIOD 2 PERIOD 3 PERIOD 4");
+        double number = celsiusInput.getNumber();
+
+        String msg = "-1.2.3.4 should be filtered to -1.234 “ 
++ ”but is " + number;
+        assertEquals(msg, -1.234d, number);
+    }

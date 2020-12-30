@@ -1,0 +1,25 @@
+!contents
+
+|import|
+|com.blundell.tut.fitnesse.fixture|
+
+!|TemperatureConverterCelsiusToFahrenheitFixture          |
+|celsius|fahrenheit?                                      |
+|0.0    |~= 32                                            |
+|100.0  |212.0                                            |
+|-1.0   |30.2                                             |
+|-100.0 |-148.0                                           |
+|32.0   |89.6                                             |
+|-40.0  |-40.0                                            |
+|-273.0 |~= -459.4                                        |
+|-273   |~= -459.4                                        |
+|-273   |~= -459                                          |
+|-273   |~= -459.40000000000003                           |
+|-273   |-459.40000000000003                              |
+|-273   |-459.41 < _ < -459.40                            |
+|-274.0 |Invalid temperature: -274.00C below absolute zero|
+
+!path /Users/blundell/AndroidApplicationTestingGuide/core/build/classes/test
+!path /Users/blundell/AndroidApplicationTestingGuide/core/build/classes/main
+
+!define TEST_SYSTEM {slim}

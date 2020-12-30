@@ -1,0 +1,12 @@
+public void testQueryBySegmentReturnsCorrectNumberOfRows() {
+    String segment = "dummySegment";
+    Uri uri = Uri.withAppendedPath(MyProvider.CONTENT_URI, segment);
+    Cursor c = provider.query(uri, null, null, null, null);
+    try {
+        int actual = c.getCount();
+
+        assertEquals(2, actual);
+    } finally {
+        c.close();
+    }
+}

@@ -1,0 +1,15 @@
+public void testSendKeyInts() {
+    requestMessageInputFocus();
+
+    sendKeys(
+    	KeyEvent.KEYCODE_H,
+        KeyEvent.KEYCODE_E,
+        KeyEvent.KEYCODE_E,
+        KeyEvent.KEYCODE_E,
+        KeyEvent.KEYCODE_Y,
+        KeyEvent.KEYCODE_DPAD_DOWN,
+        KeyEvent.KEYCODE_ENTER);
+    String actual = messageInput.getText().toString();
+
+    assertEquals("HEEEY", actual);
+}

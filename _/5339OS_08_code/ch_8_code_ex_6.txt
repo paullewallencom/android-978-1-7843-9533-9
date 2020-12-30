@@ -1,0 +1,2 @@
+$ adb shell am start -n com.blundell.tut/.TemperatureConverterActivity$ adb shell am profile com.blundell.tut start /mnt/sdcard/tc.trace
+$ adb shell am profile com.blundell.tut stop$ adb pull /mnt/sdcard/tc.trace /tmp/tc.trace$ traceview /tmp/tc.trace

@@ -1,0 +1,13 @@
+@Override
+protected void setUp() throws Exception {
+	super.setUp();
+	// this must be called before getActivity()
+	// disabling touch mode allows for sending key events
+	setActivityInitialTouchMode(false);
+
+	activity = getActivity();
+	instrumentation = getInstrumentation();
+	linkTextView = (TextView) activity.findViewById(R.id.main_text_link);
+	messageInput = (EditText) activity.findViewById(R.id.main_input_message);
+	capitalizeButton = (Button) activity.findViewById(R.id.main_button_capitalize);
+} 

@@ -1,0 +1,8 @@
+emulator -avd testdevice -no-window -no-audio -no-boot-anim -port 5580   -prop persist.sys.language=ja -prop persist.sys.country=JP
+
+adb –s emulator-5580 shell "getprop persist.sys.language"
+
+adb –s emulator-5580 shell "getprop persist.sys.country"
+
+adb -s emulator-5580 emu kill
+emulator -avd testdevice -no-window -no-audio -no-boot-anim -port 5580 -wipe-data

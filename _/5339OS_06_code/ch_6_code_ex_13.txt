@@ -1,0 +1,17 @@
+    public void testCelsiusInputMargins() {
+        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) celsiusInput.getLayoutParams();
+
+        assertEquals(getIntPixelSize(R.dimen.margin), lp.leftMargin);
+        assertEquals(getIntPixelSize(R.dimen.margin), lp.rightMargin);
+    }
+
+    public void testFahrenheitInputMargins() {
+        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) fahrenheitInput.getLayoutParams();
+
+        assertEquals(getIntPixelSize(R.dimen.margin), lp.leftMargin);
+        assertEquals(getIntPixelSize(R.dimen.margin), lp.rightMargin);
+    }
+
+    private int getIntPixelSize(int dimensionResourceId) {
+        return (int) getFloatPixelSize(dimensionResourceId);
+    }

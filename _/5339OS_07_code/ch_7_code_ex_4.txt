@@ -1,0 +1,7 @@
+@DomainSteps
+public class StepClass {
+    @DomainStep("I'm using the TemperatureConverter")
+    public void domainStep() {
+      // TODO implement step by invoking your own code
+    }
+}

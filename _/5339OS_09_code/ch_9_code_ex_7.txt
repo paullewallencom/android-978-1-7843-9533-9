@@ -1,0 +1,15 @@
+    public void testInvalidTemperatureInCelsius() throws Throwable {
+        runTestOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                celsiusInput.requestFocus();
+            }
+        });
+        getInstrumentation().waitForIdleSync();
+
+        // temp less than ABSOLUTE_ZERO_C
+        sendKeys("MINUS 3 8 0");
+
+        String msg = "Expected celsius input to contain an error msg";
+        assertNotNull(msg, celsiusInput.getError());
+    }

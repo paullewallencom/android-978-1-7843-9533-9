@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="@dimen/margin">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin"
+    android:text="@string/message" />
+
+  <TextView
+    android:id="@+id/converter_celsius_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin"
+    android:text="@string/celsius"
+    android:textSize="@dimen/label_text_size" />
+
+  <com.blundell.tut.EditNumber
+    android:id="@+id/converter_celsius_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin"
+    android:gravity="end|center_vertical" />
+
+  <TextView
+    android:id="@+id/converter_fahrenheit_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin"
+    android:text="@string/fahrenheit"
+    android:textSize="@dimen/label_text_size" />
+
+  <com.blundell.tut.EditNumber
+    android:id="@+id/converter_fahrenheit_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin"
+    android:gravity="end|center_vertical" />
+</LinearLayout>
